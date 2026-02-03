@@ -1,0 +1,498 @@
+/* ================= GLOBAL ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: #f4f6f8;
+    color: #222;
+}
+
+/* ================= HEADER ================= */
+header {
+    background: #000;
+    color: #fff;
+    padding: 15px 30px;
+    position: relative;
+}
+
+/* TOP HEADER */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* LOGO */
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-area img {
+    width: 150px;
+    height: auto;
+}
+
+.logo-area h1 {
+    font-size: 52px;
+    color: #FFD700;
+}
+
+/* SEARCH BAR */
+.search-box {
+    display: flex;
+}
+
+.search-box input {
+    padding: 8px;
+    border: none;
+    outline: none;
+}
+
+.search-box button {
+    padding: 8px 14px;
+    border: none;
+    background: #FFD700;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.search-box button:hover {
+    background: #ffcc00;
+}
+
+/* LANGUAGE TOGGLE */
+.toggle-container {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#langToggle {
+    padding: 8px 15px;
+    background: #FFD700;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#langToggle:hover {
+    background: #ffcc00;
+}
+
+/* ================= NAVBAR ================= */
+nav {
+    margin-top: 15px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu li a {
+    color: #FFD700;
+    padding: 12px 18px;
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu li a:hover {
+    background: #222;
+    color: #fff;
+}
+
+/* DROPDOWN MENU */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: #000;
+    min-width: 200px;
+    top: 45px;
+    left: 0;
+    z-index: 9999;
+    border-top: 3px solid #FFD700;
+}
+
+.dropdown-menu li a {
+    padding: 10px 15px;
+    color: #FFD700;
+}
+
+.dropdown-menu li a:hover {
+    background: #333;
+}
+
+/* Show dropdown on hover for desktop */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* ================= HERO ================= */
+.hero-contact {
+    background: #fff;
+    padding: 40px 20px;
+}
+
+.hero-contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #000;
+    display: flex;
+    align-items: center;
+}
+
+.hero-contact p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+/* ================= CONTACT SECTION ================= */
+.contact-section {
+    padding: 60px 20px;
+    background: #c9cdd1;
+}
+
+.contact-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.contact-info, 
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    background: #000;
+    color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.contact-info h3,
+.contact-form h3 {
+    color: #FFD700;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #32CD32;
+}
+
+.contact-form button.btn {
+    background: #FFD700;
+    color: #000;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button.btn:hover {
+    background: #ffcc00;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: #000;
+    color: #FFD700;
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 14px;
+    border-top: 3px solid #FFD700;
+}
+
+footer .footer-info p {
+    margin: 6px 0;
+    font-size: 15px;
+}
+
+footer .social-icons {
+    margin: 15px 0;
+}
+
+footer .social-icons a {
+    display: inline-block;
+    margin: 0 8px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+footer .social-icons img {
+    width: 32px;
+    height: 32px;
+}
+
+/* ================= FLOATING BUTTONS ================= */
+.whatsapp-float,
+.justdial-float,
+.indiamart-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+    z-index: 99999;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float {
+    bottom: 25px;
+    right: 25px;
+    background: #25D366;
+}
+
+.whatsapp-float img {
+    width: 35px;
+    height: 35px;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+.justdial-float {
+    bottom: 100px;
+    right: 25px;
+    background-color: #fff;
+}
+
+.justdial-float img {
+    width: 36px;
+    height: 36px;
+}
+
+.justdial-float:hover {
+    transform: scale(1.1);
+}
+
+.indiamart-float {
+    bottom: 170px;
+    right: 25px;
+    background-color: #fff;
+}
+
+.indiamart-float img {
+    width: 36px;
+    height: 36px;
+}
+
+.indiamart-float:hover {
+    transform: scale(1.1);
+}
+
+/* ================= RESPONSIVE STYLES ================= */
+@media (max-width: 768px) {
+    .header-container {
+        padding: 10px;
+    }
+
+    .logo-area {
+        padding: 10px 2px;
+    }
+
+    .logo-area h1 {
+        font-size: 18px;
+    }
+
+    .search-box {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    .search-box button {
+        margin: auto;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    nav {
+        margin-top: 5px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .menu li {
+        list-style: none;
+        text-align: center;
+    }
+
+    /* Top row – 3 items */
+    .menu li:nth-child(1),
+    .menu li:nth-child(2),
+    .menu li:nth-child(3) {
+        width: 33.33%;
+    }
+
+    /* Bottom row – 2 items */
+    .menu li:nth-child(4),
+    .menu li:nth-child(5) {
+        width: 50%;
+    }
+
+    .menu li a {
+        display: block;
+        padding: 10px 5px;
+        color: #FFD700;
+        font-weight: bold;
+        font-size: 16px;
+        border-bottom: 1px solid #222;
+    }
+
+    /* 1. Desktop hover effect ko mobile par band karein */
+    .dropdown:hover .dropdown-menu {
+        display: none;
+    }
+
+    /* 2. Dropdown menu ki nayi setting */
+    .dropdown-menu {
+        position: absolute !important; /* Ye zaroori hai taaki buttons niche na khisken */
+        top: 100%;                     /* Button ke theek niche se shuru ho */
+        left: 0;
+        width: 100%;                   /* Poori chaudai le le */
+        min-width: 200px;
+        background-color: #000;        /* Black background */
+        z-index: 10000;                /* Sabse upar dikhne ke liye */
+        display: none;                 /* Shuruat mein chhupa rahega */
+        padding: 0;
+    }
+
+    /* 3. Jab JS 'show' class lagaye tab hi dikhe */
+    .dropdown-menu.show {
+        display: block !important;
+    }
+
+    /* Dropdown ke andar ke links ki setting */
+    .dropdown-menu li {
+        width: 100% !important;        /* Har service poori line le le */
+    }
+
+    .dropdown-menu li a {
+        text-align: left;
+        padding: 12px 20px;
+        border-bottom: 1px solid #222;
+    }
+
+    /* Floating buttons adjustments */
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        bottom: 20px;
+        right: 15px;
+    }
+
+    .whatsapp-float img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .justdial-float {
+        width: 50px;
+        height: 50px;
+        bottom: 90px;
+        right: 15px;
+    }
+
+    .justdial-float img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .indiamart-float {
+        width: 50px;
+        height: 50px;
+        bottom: 150px;
+        right: 15px;
+    }
+
+    .indiamart-float img {
+        width: 28px;
+        height: 28px;
+    }
+
+    /* Language toggle alignment */
+    .toggle-container {
+        margin-left: 30%;
+    }
+}
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 480px) {
+    .logo-area h1 {
+        font-size: 30px;
+    }
+
+    .menu li {
+        width: 50%;
+    }
+
+    .menu li a {
+        font-size: 14px;
+        padding: 10px 4px;
+    }
+}

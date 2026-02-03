@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="About Us - Dewansh Mishra Security Services" data-hi="हमारे बारे में - देवांश मिश्रा सिक्योरिटी सर्विसेज">About Us - Dewansh Mishra Security Services</title>
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="logo-area">
+            <img src="images/logo.jpg" alt="Company Logo">
+            <h1 data-en="Dewansh Mishra Security Services" data-hi="देवांश मिश्रा सिक्योरिटी सर्विसेज">
+                Dewansh Mishra Security Services
+            </h1>
+        </div>
+
+        <!-- Search Box -->
+        <div class="search-box">
+            <input type="text" id="searchInput" 
+                   placeholder="Search on page..."
+                   data-en-placeholder="Search on page..."
+                   data-hi-placeholder="पृष्ठ पर खोजें...">
+            <button id="searchBtn" data-en="Search" data-hi="खोजें">Search</button>
+        </div>
+
+        <div class="toggle-container">
+     	   <button id="langToggle"
+            data-en="Switch to Hindi"
+            data-hi="अंग्रेज़ी में बदलें">
+            Switch to Hindi
+        </button>
+    </div>
+    </div>
+
+    <nav>
+    <ul class="menu">
+        <li>
+            <a href="index.html">
+                <span class="icon"><i class="fa fa-home" style="margin-right:5px;"></i></span>
+                <span class="text" data-en="Home" data-hi="मुखपृष्ठ">Home</span>
+            </a>
+        </li>
+        <li>
+            <a href="about.html" class="active">
+                <span class="icon"><i class="fa fa-info-circle" style="margin-right:5px;"></i></span>
+                <span class="text" data-en="About Us" data-hi="हमारे बारे में">About Us</span>
+            </a>
+        </li>
+        <li class="dropdown">
+            <a href="#">
+                <span class="icon"><i class="fa fa-cogs" style="margin-right:5px;"></i></span>
+                <span class="text" data-en="Services" data-hi="सेवाएँ">Services</span>
+                <i class="fa fa-caret-down" style="margin-left:3px;"></i>
+            </a>
+            <ul class="submenu">
+                <li>
+                    <a href="armed.html">
+                        <span class="icon"><i class="fa fa-shield-alt" style="margin-right:5px;"></i></span>
+                        <span class="text" data-en="Armed Security" data-hi="सशस्त्र सुरक्षा">Armed Security</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="unarmed.html">
+                        <span class="icon"><i class="fa fa-user-shield" style="margin-right:5px;"></i></span>
+                        <span class="text" data-en="Unarmed Security" data-hi="असशस्त्र सुरक्षा">Unarmed Security</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="private-security.html">
+                        <span class="icon"><i class="fa fa-user-secret" style="margin-right:5px;"></i></span>
+                        <span class="text" data-en="Personal Security" data-hi="व्यक्तिगत सुरक्षा">Personal Security</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="home-security.html">
+                        <span class="icon"><i class="fa fa-home" style="margin-right:5px;"></i></span>
+                        <span class="text" data-en="Home Security" data-hi="घर की सुरक्षा">Home Security</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="event-security.html">
+                        <span class="icon"><i class="fa fa-calendar-alt" style="margin-right:5px;"></i></span>
+                        <span class="text" data-en="Event Security" data-hi="इवेंट सुरक्षा">Event Security</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="lady-security.html">
+                        <span class="icon"><i class="fa fa-female" style="margin-right:5px;"></i></span>
+                        <span class="text" data-en="Lady Security" data-hi="महिला सुरक्षा">Lady Security</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="training.html">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <span data-en="Training" data-hi="प्रशिक्षण">Training</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="certification.html">
+                <span class="icon"><i class="fa fa-certificate" style="margin-right:5px;"></i></span>
+                <span class="text" data-en="Certification" data-hi="प्रमाण पत्र">Certification</span>
+            </a>
+        </li>
+        <li>
+            <a href="contact.html">
+                <span class="icon"><i class="fa fa-envelope" style="margin-right:5px;"></i></span>
+                <span class="text" data-en="Contact" data-hi="संपर्क करें">Contact</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+
+
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero-about" style="max-width:800px; margin:60px auto; color:#fff; background-color:#0B1C2D; padding:30px; border-radius:10px; font-family:Arial, sans-serif;">
+
+  <!-- Heading with icon -->
+  <h2 style="color:#ffd700; display:flex; align-items:center; margin-bottom:20px;">
+    <i class="fa fa-info-circle" style="margin-right:10px; color:#ffd700;"></i>
+    <span class="lang-text" data-en="About Us" data-hi="हमारे बारे में">About Us</span>
+  </h2>
+
+  <!-- Tagline -->
+  <p style="margin-bottom:20px; font-style:italic; color:#ff0000; display:flex; align-items:center;">
+    <i class="fa fa-shield-alt" style="margin-right:10px; color:#ff0000; font-size:20px;"></i>
+    <span class="lang-text" data-en="Your Safety, Our Responsibility" data-hi="आपकी सुरक्षा, हमारी जिम्मेदारी">
+        Your Safety, Our Responsibility
+    </span>
+</p>
+
+
+  <!-- About Us Content -->
+  <p style="margin-bottom:15px; color:#fff;">
+    <span class="lang-text"
+          data-en="Dewansh Mishra Security Services is a trusted provider of professional security solutions in Uttar Pradesh. We specialize in protecting residential, commercial, and event properties, ensuring the safety of our clients at all times."
+          data-hi="देवांश मिश्रा सिक्योरिटी सर्विसेज उत्तर प्रदेश में पेशेवर सुरक्षा सेवाओं का विश्वसनीय प्रदाता है। हम आवासीय, वाणिज्यिक और इवेंट संपत्तियों की सुरक्षा में विशेषज्ञ हैं और हमेशा अपने ग्राहकों की सुरक्षा सुनिश्चित करते हैं।">
+      Dewansh Mishra Security Services is a trusted provider of professional security solutions in Uttar Pradesh. We specialize in protecting residential, commercial, and event properties, ensuring the safety of our clients at all times.
+    </span>
+  </p>
+
+  <p style="margin-bottom:15px; color:#fff;">
+    <span class="lang-text"
+          data-en="Founded and managed by Pankaj Mishra (M.D.), our company is committed to delivering reliable, well-trained, and highly professional security services. Our team is available 24/7 and equipped to handle a wide range of security needs, from personal protection to large-scale event security."
+          data-hi="पंकज मिश्रा (एम.डी.) द्वारा स्थापित और प्रबंधित, हमारी कंपनी विश्वसनीय, प्रशिक्षित और पेशेवर सुरक्षा सेवाएं प्रदान करने के लिए प्रतिबद्ध है। हमारी टीम 24/7 उपलब्ध है और व्यक्तिगत सुरक्षा से लेकर बड़े इवेंट सुरक्षा तक की सभी आवश्यकताओं को संभालने में सक्षम है।">
+      Founded and managed by Pankaj Mishra (M.D.), our company is committed to delivering reliable, well-trained, and highly professional security services. Our team is available 24/7 and equipped to handle a wide range of security needs, from personal protection to large-scale event security.
+    </span>
+  </p>
+
+  <p style="margin-bottom:15px; color:#fff;">
+    <span class="lang-text"
+          data-en="Our mission is to provide peace of mind to our clients by combining modern security technology with experienced personnel. With a focus on trust, professionalism, and rapid response, we are dedicated to keeping you, your property, and your events safe."
+          data-hi="हमारा मिशन आधुनिक सुरक्षा तकनीक और अनुभवी कर्मचारियों को मिलाकर अपने ग्राहकों को मानसिक शांति प्रदान करना है। विश्वास, पेशेवरिता और त्वरित प्रतिक्रिया पर ध्यान केंद्रित करते हुए, हम आपकी, आपकी संपत्ति और आपके इवेंट की सुरक्षा के लिए प्रतिबद्ध हैं।">
+      Our mission is to provide peace of mind to our clients by combining modern security technology with experienced personnel. With a focus on trust, professionalism, and rapid response, we are dedicated to keeping you, your property, and your events safe.
+    </span>
+  </p>
+
+</section>
+
+<!-- ABOUT CONTENT -->
+<section class="about-section">
+    <div class="about-container">
+
+        <!-- Who We Are -->
+        <div class="about-box">
+            <h3 style="display:flex; align-items:center; color:#0B1C2D;">
+                <i class="fa fa-users" style="margin-right:10px; color:#FFD700;"></i>
+                <span class="lang-text" data-en="Who We Are" data-hi="हम कौन हैं">Who We Are</span>
+            </h3>
+
+            <p>
+                <span class="lang-text" 
+                      data-en="Dewansh Mishra Security Services is a trusted security service provider committed to delivering professional, reliable, and efficient security solutions for residential, commercial, and industrial clients."
+                      data-hi="देवांश मिश्रा सिक्योरिटी सर्विसेज पेशेवर, विश्वसनीय और कुशल सुरक्षा सेवाएं प्रदान करने वाला एक विश्वसनीय प्रदाता है।">
+                    Dewansh Mishra Security Services is a trusted security service provider committed to delivering professional, reliable, and efficient security solutions for residential, commercial, and industrial clients.
+                </span>
+            </p>
+        </div>
+
+        <!-- Our Mission -->
+        <div class="about-box">
+            <h3 style="display:flex; align-items:center; color:#0B1C2D;">
+                <i class="fa fa-bullseye" style="margin-right:10px; color:#FFD700;"></i>
+                <span class="lang-text" data-en="Our Mission" data-hi="हमारा मिशन">Our Mission</span>
+            </h3>
+
+            <p>
+                <span class="lang-text" 
+                      data-en="Our mission is to ensure complete safety and peace of mind by providing highly trained security personnel and modern security solutions that meet the highest standards."
+                      data-hi="हमारा मिशन उच्चतम मानकों के अनुसार प्रशिक्षित सुरक्षा कर्मचारियों और आधुनिक सुरक्षा समाधानों के माध्यम से पूर्ण सुरक्षा और मानसिक शांति सुनिश्चित करना है।">
+                    Our mission is to ensure complete safety and peace of mind by providing highly trained security personnel and modern security solutions that meet the highest standards.
+                </span>
+            </p>
+        </div>
+
+        <!-- Why Choose Us -->
+        <div class="about-box">
+            <h3 style="display:flex; align-items:center; color:#0B1C2D;">
+                <i class="fa fa-check-circle" style="margin-right:10px; color:#FFD700;"></i>
+                <span class="lang-text" data-en="Why Choose Us" data-hi="हमें क्यों चुनें">Why Choose Us</span>
+            </h3>
+
+            <ul>
+                <li><span class="lang-text" data-en="Trained & Verified Security Guards" data-hi="प्रशिक्षित और सत्यापित सुरक्षा गार्ड्स">Trained & Verified Security Guards</span></li>
+                <li><span class="lang-text" data-en="24/7 Support & Monitoring" data-hi="24/7 सहायता और निगरानी">24/7 Support & Monitoring</span></li>
+                <li><span class="lang-text" data-en="Affordable & Reliable Services" data-hi="सस्ती और विश्वसनीय सेवाएं">Affordable & Reliable Services</span></li>
+                <li><span class="lang-text" data-en="Customer Satisfaction Guaranteed" data-hi="ग्राहक संतुष्टि की गारंटी">Customer Satisfaction Guaranteed</span></li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-info">
+        <p>
+            📍 <span data-en="Dewansh Mishra Security Services — Near TB Hospital, Manhandeeh, Labanapar, Basti, Basti-272002, Uttar Pradesh, India"
+                      data-hi="देवांश मिश्रा सिक्योरिटी सर्विसेज — टीबी अस्पताल के पास, मानहंदीह, लबनापार, बस्ती, बस्ती-272002, उत्तर प्रदेश, भारत">
+                Dewansh Mishra Security Services — Near TB Hospital, Manhandeeh...
+            </span>
+        </p>
+        <p>
+            📞 <span data-en="+91-8318228964 | 📧 dewanshbasti@gmail.com"
+                      data-hi="+91-8318228964 | 📧 dewanshbasti@gmail.com">
+                +91-8318228964 | 📧 dewanshbasti@gmail.com
+            </span>
+        </p>
+    </div>
+
+    <div class="social-icons">
+        <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
+        <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="images/whatsapp.png" alt="WhatsApp"></a>
+    </div>
+
+    <p>
+        <span data-en="© 2026 Dewansh Mishra Security Services. All Rights Reserved."
+              data-hi="© 2026 देवांश मिश्रा सिक्योरिटी सर्विसेज। सर्वाधिकार सुरक्षित।">
+            © 2026 Dewansh Mishra Security Services. All Rights Reserved.
+        </span>
+    </p>
+</footer>
+
+<!-- WhatsApp / Justdial / IndiaMART Floating Buttons -->
+<a href="https://wa.me/918318228964" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+    <img src="images/whatsapp.png" alt="WhatsApp">
+</a>
+<a href="https://www.justdial.com/Basti/Dewansh-Mishra-Security-Services-Near-Tv-Hospital-Basti-Bs/9999P5542-5542-230925094916-P6E2_BZDET" 
+   class="justdial-float" target="_blank" title="Visit Justdial Profile">
+    <img src="images/justdial.png" alt="Justdial">
+</a>
+<a href="https://www.indiamart.com/dewansh-mishra-security-services/" class="indiamart-float" target="_blank" title="Visit IndiaMART Profile">
+    <img src="images/indiamart.png" alt="IndiaMART">
+</a>
+
+<script>
+document.getElementById("searchBtn").addEventListener("click", highlightText);
+
+function highlightText() {
+    const keyword = document.getElementById("searchInput").value.trim();
+    if (!keyword) { alert("Please enter a word to search"); return; }
+    clearHighlights();
+
+    const elements = document.querySelectorAll("body *:not(script):not(style)");
+    elements.forEach(el => {
+        if (el.children.length === 0 && el.textContent.toLowerCase().includes(keyword.toLowerCase())) {
+            const regex = new RegExp(`(${keyword})`, "gi");
+            el.innerHTML = el.textContent.replace(regex, `<span class="highlight">$1</span>`);
+        }
+    });
+}
+
+function clearHighlights() {
+    document.querySelectorAll(".highlight").forEach(span => span.replaceWith(span.textContent));
+}
+</script>
+<script src="js/toggle.js"></script>
+<script src="js/mobile-dropdown.js"></script>
+<script src="js/protection.js"></script>
+</body>
+</html>

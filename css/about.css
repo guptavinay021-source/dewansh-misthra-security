@@ -1,0 +1,458 @@
+/* ================= GLOBAL STYLES ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f4f6f8;
+    color: #222;
+}
+
+/* ================= HEADER ================= */
+header {
+    background: #000;
+    color: #fff;
+    padding: 15px 30px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-area img {
+    width: 150px;
+}
+
+.logo-area h1 {
+    color: #FFD700;
+    font-size: 52px;
+}
+
+.search-box {
+    display: flex;
+}
+
+.search-box input {
+    padding: 8px;
+    border: none;
+}
+
+.search-box button {
+    padding: 8px 14px;
+    background: #FFD700;
+    border: none;
+    font-weight: bold;
+}
+
+/* ================= NAVIGATION ================= */
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu li a {
+    color: #FFD700;
+    padding: 12px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+}
+
+.menu li a:hover,
+.menu li a.active {
+    background: #222;
+    color: #fff;
+}
+
+/* ================= SUBMENU ================= */
+.submenu {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #000;
+    min-width: 220px;
+    display: none;
+    border-top: 3px solid #FFD700;
+    z-index: 999;
+}
+
+/* Show submenu on hover for desktop */
+.dropdown:hover > .submenu {
+    display: block;
+}
+
+.submenu li a {
+    padding: 10px 15px;
+    color: #FFD700;
+}
+
+.submenu li a:hover {
+    background: #333;
+}
+
+/* ================= HERO ABOUT ================= */
+.hero-about {
+    background: #0B1C2D; /* Navy Blue */
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-about h2 {
+    font-size: 38px;
+    color: #FFD700;
+}
+
+.hero-about p {
+    font-size: 18px;
+}
+
+/* ================= ABOUT SECTION ================= */
+.about-section {
+    padding: 20px;
+}
+
+.about-container {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.about-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.about-box h3 {
+    color: #0B1C2D;
+    margin-bottom: 15px;
+}
+
+.about-box ul {
+    list-style: none;
+}
+
+.about-box ul li {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: #000;
+    color: #FFD700;
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 14px;
+    border-top: 3px solid #FFD700;
+}
+
+footer .footer-info p {
+    margin: 6px 0;
+    font-size: 15px;
+}
+
+footer .social-icons {
+    margin: 15px 0;
+}
+
+footer .social-icons a {
+    display: inline-block;
+    margin: 0 8px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+footer .social-icons img {
+    width: 32px;
+    height: 32px;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #FFD700;
+}
+
+/* ================= HIGHLIGHT TEXT ================= */
+.highlight {
+    background: yellow;
+    color: black;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+/* ================= LANGUAGE TOGGLE BUTTON ================= */
+.toggle-container {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#langToggle {
+    padding: 8px 15px;
+    background: #FFD700;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#langToggle:hover {
+    background: #ffcc00;
+}
+
+/* ================= FLOATING BUTTONS ================= */
+.whatsapp-float,
+.justdial-float,
+.indiamart-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+    z-index: 99999;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float {
+    bottom: 25px;
+    right: 25px;
+    background: #25D366;
+}
+
+.whatsapp-float img {
+    width: 35px;
+    height: 35px;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+.justdial-float {
+    bottom: 100px;
+    right: 25px;
+    background-color: #fff;
+}
+
+.justdial-float img {
+    width: 36px;
+    height: 36px;
+}
+
+.justdial-float:hover {
+    transform: scale(1.1);
+}
+
+.indiamart-float {
+    bottom: 170px;
+    right: 25px;
+    background-color: #fff;
+}
+
+.indiamart-float img {
+    width: 36px;
+    height: 36px;
+}
+
+.indiamart-float:hover {
+    transform: scale(1.1);
+}
+
+/* ================= RESPONSIVE STYLES ================= */
+@media (max-width: 768px) {
+
+    /* HEADER */
+    .header-container {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .logo-area {
+        justify-content: center;
+    }
+
+    .logo-area h1 {
+        font-size: 24px;
+    }
+
+    /* SEARCH */
+    .search-box {
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    .search-box input {
+        flex: 1;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .search-box button {
+        font-size: 15px;
+        padding: 10px 16px;
+    }
+
+    /* NAV */
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu li {
+        width: 33.33%;
+        text-align: center;
+    }
+
+    .menu li:nth-child(4),
+    .menu li:nth-child(5) {
+        width: 50%;
+    }
+
+    .menu li a {
+        font-size: 15px;
+        padding: 10px 5px;
+        border-bottom: 1px solid #222;
+    }
+
+    /* SUBMENU FIX */
+    .submenu {
+        position: static;
+        min-width: 100%;
+    }
+
+    /* Jab JS se toggle ho */
+    .submenu.show {
+        display: block !important;
+    }
+	
+    .dropdown:hover > .submenu {
+       display: none;
+    }
+
+    /* HERO ABOUT */
+    .hero-about {
+        height: auto;
+        padding: 50px 20px;
+    }
+
+    .hero-about h2 {
+        font-size: 28px;
+    }
+
+    .hero-about p {
+        font-size: 16px;
+    }
+
+    /* ABOUT BOX */
+    .about-box h3 {
+        font-size: 20px;
+    }
+
+    .about-box ul li {
+        font-size: 15px;
+    }
+
+    /* FLOATING BUTTONS */
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        bottom: 20px;
+        right: 15px;
+    }
+
+    .whatsapp-float img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .justdial-float {
+        width: 50px;
+        height: 50px;
+        bottom: 90px;
+        right: 15px;
+    }
+
+    .justdial-float img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .indiamart-float {
+        width: 50px;
+        height: 50px;
+        bottom: 150px;
+        right: 15px;
+    }
+
+    .indiamart-float img {
+        width: 28px;
+        height: 28px;
+    }
+
+    /* FOOTER */
+    footer {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-area h1 {
+        font-size: 22px;
+    }
+
+    .menu li {
+        width: 50%;
+    }
+
+    .menu li a {
+        font-size: 16px;
+        padding: 10px 4px;
+    }
+
+    .hero-about h2 {
+        font-size: 24px;
+    }
+
+    .hero-about p {
+        font-size: 15px;
+    }
+}

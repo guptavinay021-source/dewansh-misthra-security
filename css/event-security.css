@@ -1,0 +1,397 @@
+/* ===== GLOBAL ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f4f6f8;
+    color: #222;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: #000;
+    padding: 15px 20px;
+}
+
+.header-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-area img {
+    width: 150px;
+}
+
+.logo-area h1 {
+    color: #FFD700;
+    font-size: 52px;
+}
+
+/* ===== NAV ===== */
+.menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu li a {
+    color: #FFD700;
+    padding: 8px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+}
+
+.menu li a:hover,
+.menu li a.active {
+    background: #222;
+    color: #fff;
+}
+
+/* DROPDOWN */
+.submenu {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #000;
+    min-width: 180px;
+    display: none;
+    border-top: 3px solid #FFD700;
+    z-index: 999;
+}
+
+.submenu li a {
+    padding: 8px 12px;
+}
+
+.submenu li a:hover {
+    background: #333;
+}
+
+.dropdown:hover > .submenu {
+    display: block;
+}
+
+/* ===== BANNER ===== */
+.service-banner {
+    position: relative;
+    background: url("../images/event-security-banner.png") center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.service-banner::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.service-banner h2 {
+    position: relative;
+    z-index: 2;
+    color: #FF0000;
+    font-size: 66px;
+    padding: 15px 20px;
+    border-radius: 6px;
+    line-height: 1.3;
+}
+
+/* ===== CONTENT ===== */
+.service-content {
+    padding: 40px 20px;
+}
+
+.service-wrapper {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.service-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.service-text h3 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: #0B1C2D;
+}
+
+.service-text p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.service-text ul {
+    list-style: none;
+    margin-bottom: 15px;
+    padding-left: 0;
+}
+
+.service-text ul li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.service-text ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #FFD700;
+}
+
+/* ===== WHATSAPP FLOAT ===== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 1000;
+}
+
+.whatsapp-float img {
+    width: 100%;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #000;
+    color: #FFD700;
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 14px;
+    border-top: 3px solid #FFD700;
+}
+
+footer .footer-info p {
+    margin: 6px 0;
+    font-size: 15px;
+}
+
+footer .social-icons {
+    margin: 15px 0;
+}
+
+footer .social-icons a {
+    display: inline-block;
+    margin: 0 8px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+footer .social-icons img {
+    width: 32px;
+    height: 32px;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #FFD700;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .service-wrapper {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 12px 15px;
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .service-banner {
+        height: 35vh;
+        padding: 0 15px;
+    }
+
+    .service-banner h2 {
+        font-size: 22px;
+        padding: 10px 15px;
+    }
+
+    .service-content {
+        padding: 30px 15px;
+    }
+}
+
+/* ===== WHATSAPP FLOAT BUTTON ===== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #25D366;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    z-index: 9999;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float img {
+    width: 35px;
+    height: 35px;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+/* Mobile Friendly */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        bottom: 20px;
+        right: 15px;
+    }
+
+    .whatsapp-float img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* ===== Justdial Floating Button with Icon ===== */
+.justdial-float {
+    position: fixed;
+    right: 25px;
+    bottom: 100px;       /* WhatsApp se thoda upar */
+    width: 60px;
+    height: 60px;
+    background-color: #fff;   /* white background */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+    z-index: 99999;
+    transition: transform 0.3s ease;
+}
+
+.justdial-float img {
+    width: 36px;
+    height: 36px;
+}
+
+.justdial-float:hover {
+    transform: scale(1.1);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+    .justdial-float {
+        width: 50px;
+        height: 50px;
+        bottom: 90px;
+        right: 15px;
+    }
+
+    .justdial-float img {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+/* ===== IndiaMART Floating Button with Icon ===== */
+.indiamart-float {
+    position: fixed;
+    right: 25px;
+    bottom: 170px;       /* WhatsApp + Justdial se thoda upar */
+    width: 60px;
+    height: 60px;
+    background-color: #fff;   /* IndiaMART blue */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+    z-index: 99999;
+    transition: transform 0.3s ease;
+}
+
+.indiamart-float img {
+    width: 36px;
+    height: 36px;
+}
+
+.indiamart-float:hover {
+    transform: scale(1.1);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+    .indiamart-float {
+        width: 50px;
+        height: 50px;
+        bottom: 150px;     /* WhatsApp + Justdial spacing */
+        right: 15px;
+    }
+
+    .indiamart-float img {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+.highlight {
+    background: yellow;
+    color: black;
+    padding: 2px 4px;
+    border-radius: 3px;
+}

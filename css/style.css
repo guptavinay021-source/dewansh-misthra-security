@@ -1,0 +1,508 @@
+/* ================= GLOBAL ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: #f4f6f8;
+    color: #222;
+}
+
+/* ================= HEADER ================= */
+header {
+    background: #000;
+    color: #fff;
+    padding: 30px 30px;
+}
+
+/* Top header container */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Logo */
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-area img {
+    width: 150px;
+    height: 150px;
+}
+
+.logo-area h1 {
+    font-size: 52px;
+    color: #FFD700;
+}
+
+/* Search bar */
+.search-box {
+    display: flex;
+}
+
+.search-box input {
+    padding: 8px;
+    border: none;
+    outline: none;
+}
+
+.search-box button {
+    padding: 8px 14px;
+    border: none;
+    background: #FFD700;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.search-box button:hover {
+    background: #ffcc00;
+}
+
+/* Language toggle */
+.toggle-container {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#langToggle {
+    padding: 8px 15px;
+    background: #FFD700;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#langToggle:hover {
+    background: #ffcc00;
+}
+
+/* ================= NAVBAR ================= */
+nav {
+    margin-top: 15px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #FFD700;
+    padding: 12px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menu li a i {
+    font-size: 16px;
+    color: #FFD700;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.menu li a:hover,
+.menu li a:hover i {
+    color: #ffffff;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: #000;
+    min-width: 200px;
+    top: 45px;
+    left: 0;
+    z-index: 9999;
+    border-top: 3px solid #FFD700;
+}
+
+.dropdown-menu li a {
+    padding: 10px 15px;
+    color: #FFD700;
+}
+
+.dropdown-menu li a:hover {
+    background: #333;
+}
+
+/* Show dropdown on hover (desktop) */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Mobile dropdown fix */
+@media (max-width: 768px) {
+    /* Hover ko disable karna zaroori hai mobile par */
+    .dropdown:hover .dropdown-menu {
+        display: none; 
+    }
+
+    .dropdown-menu {
+        display: none;        /* Default band */
+        position: static;     /* Normal stack */
+        width: 100%;
+        background: #111;     /* Thoda dark background dropdown ke liye */
+    }
+
+    /* Ye class JS se trigger hogi */
+    .dropdown-menu.show {
+        display: block !important;
+    }
+}
+
+
+/* ================= HERO SLIDER ================= */
+.hero {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 160px); /* header adjusted */
+    overflow: hidden;
+    background: #000;
+}
+
+.slideshow {
+    position: absolute;
+    inset: 0;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    background-size: contain; /* portrait-safe */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    opacity: 0;
+    transition: opacity 1.9s ease-in-out;
+    filter: brightness(1.08);
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+/* Hero content overlay */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    color: red;
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #7CFC00;
+    font-weight: bold;
+}
+
+/* Buttons */
+.btn {
+    background: #FFD700;
+    color: #000;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #ffcc00;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: #000;
+    color: #FFD700;
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 14px;
+    border-top: 3px solid #FFD700;
+}
+
+footer .footer-info p {
+    margin: 6px 0;
+    font-size: 15px;
+}
+
+footer .social-icons {
+    margin: 15px 0;
+}
+
+footer .social-icons a {
+    display: inline-block;
+    margin: 0 8px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+footer .social-icons img {
+    width: 32px;
+    height: 32px;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #FFD700;
+}
+
+/* ================= NOTIFICATION BAR ================= */
+.notification-bar {
+    position: fixed;
+    left: 20px;
+    top: 30%;
+    width: 200px;
+    max-width: 100%;
+    height: 725px;
+    background: #a7deff;
+    color: #000;
+    font-weight: bold;
+    border-radius: 12px;
+    padding: 15px 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    z-index: 50;
+    overflow: hidden;
+}
+
+.notification-wrapper {
+    height: 725px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 10px;
+}
+
+.notification-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    animation: scroll-up 20s linear infinite;
+}
+
+.notification-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    font-size: 14px;
+}
+
+.notification-list li::before {
+    content: "⚡";
+    margin-right: 6px;
+}
+
+/* Smooth upward scroll animation */
+@keyframes scroll-up {
+    0% { top: 0; }
+    100% { top: -100%; }
+}
+
+/* Pause scroll on hover */
+.notification-bar:hover .notification-list {
+    animation-play-state: paused;
+}
+
+/* ================= FLOATING BUTTONS ================= */
+.whatsapp-float,
+.justdial-float,
+.indiamart-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    z-index: 9999;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float {
+    bottom: 25px;
+    right: 25px;
+    background: #25D366;
+}
+
+.whatsapp-float img {
+    width: 35px;
+    height: 35px;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+.justdial-float {
+    bottom: 100px;
+    right: 25px;
+    background-color: #fff;
+}
+
+.justdial-float img {
+    width: 36px;
+    height: 36px;
+}
+
+.justdial-float:hover {
+    transform: scale(1.1);
+}
+
+.indiamart-float {
+    bottom: 170px;
+    right: 25px;
+    background-color: #fff;
+}
+
+.indiamart-float img {
+    width: 36px;
+    height: 36px;
+}
+
+.indiamart-float:hover {
+    transform: scale(1.1);
+}
+
+/* ================= HIGHLIGHT SEARCH ================= */
+.highlight {
+    background: yellow;
+    color: black;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    header {
+        padding: 10px 15px;
+    }
+
+    .header-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo-area h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .menu {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .hero {
+        height: calc(100vh - 220px);
+    }
+
+    .hero-content h2 {
+        font-size: 26px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .notification-bar {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        top: 59%;
+        left: 0;
+        padding: 10px 12px;
+        font-size: 12px;
+        border-radius: 8px;
+    }
+
+    .notification-wrapper {
+        height: 120px;
+    }
+
+    .notification-list {
+        position: relative;
+        animation: none;
+        overflow-y: auto;
+        max-height: 120px;
+    }
+
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        bottom: 20px;
+        right: 15px;
+    }
+
+    .whatsapp-float img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .justdial-float {
+        width: 50px;
+        height: 50px;
+        bottom: 90px;
+        right: 15px;
+    }
+
+    .justdial-float img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .indiamart-float {
+        width: 50px;
+        height: 50px;
+        bottom: 150px;
+        right: 15px;
+    }
+
+    .indiamart-float img {
+        width: 28px;
+        height: 28px;
+    }
+}
